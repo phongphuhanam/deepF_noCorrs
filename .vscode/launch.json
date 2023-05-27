@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        
+        {
+            "name": "Kitti main FMat find",
+            "type": "python",
+            "request": "launch",
+            "program": "kitti_fmat.py",
+            "cwd": "${workspaceFolder}/kittiFMat/",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--img1", "../data/kitti/2011_09_26/2011_09_26_drive_0001_sync/image_00/data/0000000000.png",
+                "--img2", "../data/kitti/2011_09_26/2011_09_26_drive_0001_sync/image_01/data/0000000000.png"
+            ]
+        },
+
+        {
+            "name": "Kitti main ",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "cwd": "${workspaceFolder}/kittiFMat/",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--img1", "../data/kitti/2011_09_26/2011_09_26_drive_0001_sync/image_00/data/0000000000.png",
+                "--img2", "../data/kitti/2011_09_26/2011_09_26_drive_0001_sync/image_01/data/0000000000.png"
+            ]
+        },
+    ]
+}
