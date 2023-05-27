@@ -7,7 +7,7 @@ import numpy as np
 from util import sift_get_fmat, err_pts_correspond
 # import nsml
 # from nsml import DATASET_PATH
-from parser import KittiParamParser
+from parser2 import KittiParamParser
 
 def get_FMat(img1, img2, r=1.0, cam1=0, cam2=1, mode='CAM'):
     img1 = cv2.imread(img1,0)  #queryimage # left image
@@ -56,7 +56,7 @@ def get_FMat(img1, img2, r=1.0, cam1=0, cam2=1, mode='CAM'):
         # all_pts2 = np.concatenate((all_pts2, pts2))
     
     elif mode == 'CAM':
-        F, pts1, pts2 = sift_get_fmat(img1, img2, total = 200, ratio = r, algo=cv2.FM_RANSAC)
+        F, pts1, pts2 = sift_get_fmat(img1, img2, total = 200, ratio = r, algo=cv2.FM_RANSAC, display=True)
         F = p.get_F(cam1, cam2)
         
         # F = np.array([

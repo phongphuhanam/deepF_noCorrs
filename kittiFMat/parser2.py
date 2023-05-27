@@ -79,6 +79,7 @@ class KittiParamParser(object):
         #compute
         F = np.dot(np.linalg.inv(K2.T), np.dot(T, np.dot(R, np.linalg.inv(K1))))
         F /= F[2,2]
+        F = F.astype(np.float64)
         assert np.linalg.matrix_rank(F) == 2
 
         F = self.get_normalized_F(F, mean=[0,0], std=[np.sqrt(2.), np.sqrt(2.)], size=self.shape)
@@ -91,4 +92,4 @@ class KittiParamParser(object):
         return cv2.undistort(img, K, D)
 
 if __name__ == "__main__":
-    p = KittiParamParser('../../data_kitti/kitti/calib_cam_to_cam.txt')
+    p = KittiParamParser('../data_kitti/kitti/calib_cam_to_cam.txt')

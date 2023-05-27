@@ -4,7 +4,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 from util import sift_get_fmat, err_pts_correspond
-from parser import KittiParamParser
+from parser2 import KittiParamParser
 
 if __name__ == "__main__":
     import argparse

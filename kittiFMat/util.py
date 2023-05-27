@@ -2,7 +2,7 @@
 import cv2
 import random
 import numpy as np
-from parser import KittiParamParser
+from parser2 import KittiParamParser
 # from matplotlib import pyplot as plt
 
 sift = cv2.xfeatures2d.SIFT_create()
